@@ -55,13 +55,7 @@ void BANK::add_customer()
 	cin >> amt_deposite;
 
 }
-/*void BANK::store()
-{
-	ofstream fout;
-	fout.open("data.dat",ios::app|ios::binary);
-	fout.write((char*)this, sizeof(*this));
-	fout.close();
-}*/
+
 
 //////////////////////////////////////////////////////////////////////////
 int main()
