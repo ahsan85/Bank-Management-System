@@ -18,6 +18,7 @@ private:
 	int date,account_number,dob,age,city_no, ph_no, amt_deposite;
 	char customer_name[25];
 	char address[60];
+	char choice_add_customer;
 
 };
 
@@ -53,7 +54,18 @@ void BANK::add_customer()
 	cin >> ph_no;
 	cout << "Enter the ammount to deposite:$";
 	cin >> amt_deposite;
+        cout << "\n\t\t\t Press 'P' to Preview infrmation";
+	cin >> choice_add_customer;
+	system("cls");
+	if (choice_add_customer == 'p' || choice_add_customer == 'P')
+	{
+		BANK c1;
 
+		//c1.add_customer();
+		ifstream infile("my.DAT", ios::binary);
+		infile.read(reinterpret_cast<char*>(&c1), sizeof(c1));
+		c1.show();
+	}
 }
 
 
